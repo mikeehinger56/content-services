@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H92HCQ2EPL"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-H92HCQ2EPL');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mike Ehinger | SEO Content for Local Service Businesses</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --ink: #1a1a1a;
+            --paper: #faf9f7;
+            --accent: #2d5a27;
+            --accent-light: #e8f0e7;
+            --muted: #6b6b6b;
+            --border: #e0ddd8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Source Sans 3', -apple-system, sans-serif;
+            background: var(--paper);
+            color: var(--ink);
+            line-height: 1.6;
+            font-size: 17px;
+        }
+
+        /* Header */
+        header {
+            padding: 2rem 1.5rem;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            background: var(--paper);
+            z-index: 100;
+        }
+
+        .header-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.5rem;
+            color: var(--ink);
+            text-decoration: none;
+        }
+
+        nav a {
+            color: var(--muted);
+            text-decoration: none;
+            margin-left: 2rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: var(--ink);
+        }
+
+        /* Hero */
+        .hero {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 6rem 1.5rem 5rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-family: 'DM Serif Display', serif;
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            line-height: 1.15;
+            margin-bottom: 1.5rem;
+            font-weight: 400;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--muted);
+            max-width: 650px;
+            margin: 0 auto 2.5rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 1rem 2.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 4px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(45, 90, 39, 0.3);
+        }
+
+        /* Section styling */
+        section {
+            padding: 5rem 1.5rem;
+        }
+
+        section:nth-child(even) {
+            background: white;
+        }
+
+        .section-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 2.25rem;
+            margin-bottom: 1rem;
+            font-weight: 400;
+        }
+
+        .section-lead {
+            font-size: 1.1rem;
+            color: var(--muted);
+            max-width: 600px;
+            margin-bottom: 3rem;
+        }
+
+        /* Problem/Solution */
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .problem-card {
+            padding: 2rem;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            background: var(--paper);
+        }
+
+        .problem-card h3 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.35rem;
+            margin-bottom: 0.75rem;
+            font-weight: 400;
+        }
+
+        .problem-card p {
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        /* Services */
+        .services-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .service-item {
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .service-item:last-child {
+            border-bottom: none;
+        }
+
+        .service-item h3 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 400;
+        }
+
+        .service-item .price {
+            color: var(--accent);
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-item ul {
+            list-style: none;
+            color: var(--muted);
+        }
+
+        .service-item li {
+            padding: 0.35rem 0;
+            padding-left: 1.25rem;
+            position: relative;
+        }
+
+        .service-item li::before {
+            content: "—";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+        }
+
+        /* Industries */
+        .industries-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .industry-tag {
+            padding: 1rem 1.25rem;
+            background: var(--accent-light);
+            border-radius: 4px;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        /* Process */
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 2rem;
+            counter-reset: step;
+        }
+
+        .step {
+            position: relative;
+            padding-left: 3.5rem;
+        }
+
+        .step::before {
+            counter-increment: step;
+            content: counter(step);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 2.5rem;
+            height: 2.5rem;
+            background: var(--accent);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+        }
+
+        .step h3 {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .step p {
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        /* About */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        @media (max-width: 768px) {
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+
+        .about-stats {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .stat {
+            padding: 1.5rem;
+            background: var(--accent-light);
+            border-radius: 8px;
+        }
+
+        .stat-number {
+            font-family: 'DM Serif Display', serif;
+            font-size: 2.5rem;
+            color: var(--accent);
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--muted);
+            margin-top: 0.25rem;
+        }
+
+        .about-text p {
+            margin-bottom: 1.25rem;
+            color: var(--muted);
+        }
+
+        .about-text p:first-of-type {
+            color: var(--ink);
+            font-size: 1.1rem;
+        }
+
+        /* Sample Topics */
+        .topics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+        }
+
+        .topic {
+            padding: 1.25rem 1.5rem;
+            border-left: 3px solid var(--accent);
+            background: white;
+            font-size: 0.95rem;
+        }
+
+        .topic-industry {
+            font-size: 0.8rem;
+            color: var(--accent);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.25rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: var(--accent) !important;
+            color: white;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            color: white;
+        }
+
+        .cta-section p {
+            color: rgba(255,255,255,0.85);
+            font-size: 1.15rem;
+            max-width: 550px;
+            margin: 0 auto 2rem;
+        }
+
+        .cta-section .cta-button {
+            background: white;
+            color: var(--accent);
+        }
+
+        .cta-section .cta-button:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        /* Contact */
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .contact-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--accent-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent);
+            font-size: 1.25rem;
+        }
+
+        .contact-label {
+            font-size: 0.85rem;
+            color: var(--muted);
+        }
+
+        .contact-value {
+            font-weight: 600;
+            color: var(--ink);
+        }
+
+        .contact-value a {
+            color: var(--ink);
+            text-decoration: none;
+        }
+
+        .contact-value a:hover {
+            color: var(--accent);
+        }
+
+        /* Footer */
+        footer {
+            padding: 3rem 1.5rem;
+            text-align: center;
+            border-top: 1px solid var(--border);
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            nav {
+                display: none;
+            }
+            
+            .hero {
+                padding: 4rem 1.5rem 3rem;
+            }
+            
+            section {
+                padding: 3rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <a href="#" class="logo">Mike Ehinger</a>
+            <nav>
+                <a href="#services">Services</a>
+                <a href="#process">Process</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>SEO content that puts local service businesses on page one</h1>
+        <p>Consistent, high-quality blog content for pool companies, turf installers, landscapers, and fence contractors across Michigan and beyond.</p>
+        <a href="#contact" class="cta-button">Get a Free Sample Article</a>
+    </section>
+
+    <section>
+        <div class="section-inner">
+            <h2>The problem with your blog</h2>
+            <p class="section-lead">You know content matters. You just don't have time to write it.</p>
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <h3>Dead or thin blog</h3>
+                    <p>Your last post was from 2021. Or you have three articles total. Google notices, and so do your competitors who post consistently.</p>
+                </div>
+                <div class="problem-card">
+                    <h3>No time to write</h3>
+                    <p>You're running crews, managing installs, answering calls. Writing a 1,000-word article on "vinyl vs. wood fencing" isn't happening.</p>
+                </div>
+                <div class="problem-card">
+                    <h3>Burned by cheap content</h3>
+                    <p>You tried a content mill. The articles were generic, stuffed with keywords, and made your company look amateur.</p>
+                </div>
+                <div class="problem-card">
+                    <h3>Missing local searches</h3>
+                    <p>When homeowners Google "pool installation [your city]" or "best turf for dogs Michigan," your competitors show up. You don't.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="section-inner">
+            <h2>How I help</h2>
+            <p class="section-lead">Quality content at mid-market prices, delivered efficiently through smart systems.</p>
+            <div class="services-list">
+                <div class="service-item">
+                    <h3>Per-Article</h3>
+                    <div class="price">$175 per article</div>
+                    <ul>
+                        <li>800-1,200 words, SEO-optimized</li>
+                        <li>Keyword research included</li>
+                        <li>One round of revisions</li>
+                        <li>5 business day turnaround</li>
+                        <li>Perfect for testing the waters</li>
+                    </ul>
+                </div>
+                <div class="service-item">
+                    <h3>Monthly Retainer</h3>
+                    <div class="price">$2,000/month for 10 articles</div>
+                    <ul>
+                        <li>Content calendar planning</li>
+                        <li>Strategic keyword targeting</li>
+                        <li>Consistent brand voice</li>
+                        <li>Priority scheduling</li>
+                        <li>Best value for serious growth</li>
+                    </ul>
+                </div>
+                <div class="service-item">
+                    <h3>Starter Package</h3>
+                    <div class="price">$750 for 5 articles</div>
+                    <ul>
+                        <li>Jump-start a dead blog</li>
+                        <li>Core topics covered</li>
+                        <li>Foundation for ongoing content</li>
+                        <li>Delivered in 2-3 weeks</li>
+                        <li>One-time engagement option</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="section-inner">
+            <h2>Industries I serve</h2>
+            <p class="section-lead">Specialized content for local service businesses that need to show up when customers search.</p>
+            <div class="industries-grid">
+                <div class="industry-tag">Pool Installation</div>
+                <div class="industry-tag">Artificial Turf</div>
+                <div class="industry-tag">Landscaping</div>
+                <div class="industry-tag">Fence Installation</div>
+                <div class="industry-tag">HVAC</div>
+                <div class="industry-tag">Roofing</div>
+                <div class="industry-tag">Concrete & Paving</div>
+                <div class="industry-tag">Deck Building</div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="section-inner">
+            <h2>Sample topics</h2>
+            <p class="section-lead">The kind of content that ranks locally and answers real customer questions.</p>
+            <div class="topics-grid">
+                <div class="topic">
+                    <div class="topic-industry">Pool</div>
+                    Pool Opening Checklist for Michigan Homeowners: Spring 2025 Edition
+                </div>
+                <div class="topic">
+                    <div class="topic-industry">Turf</div>
+                    Pet Turf vs. Natural Grass: What Michigan Dog Owners Need to Know
+                </div>
+                <div class="topic">
+                    <div class="topic-industry">Fence</div>
+                    Vinyl vs. Wood Fencing in Michigan: Cost, Durability, and Maintenance Compared
+                </div>
+                <div class="topic">
+                    <div class="topic-industry">Landscaping</div>
+                    Best Low-Maintenance Plants for Southeast Michigan Yards
+                </div>
+                <div class="topic">
+                    <div class="topic-industry">Pool</div>
+                    Above Ground vs. In-Ground Pools: Which Is Right for Your Backyard?
+                </div>
+                <div class="topic">
+                    <div class="topic-industry">Turf</div>
+                    How Much Does a Backyard Putting Green Cost in Michigan?
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="process">
+        <div class="section-inner">
+            <h2>How it works</h2>
+            <p class="section-lead">Simple process, minimal time from you, consistent results.</p>
+            <div class="process-steps">
+                <div class="step">
+                    <h3>Discovery call</h3>
+                    <p>30 minutes to understand your business, voice, and content priorities.</p>
+                </div>
+                <div class="step">
+                    <h3>Content calendar</h3>
+                    <p>I propose topics based on keyword opportunities and what your customers actually search.</p>
+                </div>
+                <div class="step">
+                    <h3>Draft delivery</h3>
+                    <p>Polished, publication-ready articles delivered to your inbox within 5 business days.</p>
+                </div>
+                <div class="step">
+                    <h3>Revise if needed</h3>
+                    <p>One revision round included. You approve, then publish.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="section-inner">
+            <h2>About me</h2>
+            <div class="about-content">
+                <div class="about-stats">
+                    <div class="stat">
+                        <div class="stat-number">10+</div>
+                        <div class="stat-label">Years in operations leadership</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">100+</div>
+                        <div class="stat-label">Professionals trained on AI tools</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">3,000+</div>
+                        <div class="stat-label">Views on viral content in first hour</div>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <p>I'm Mike Ehinger, a Michigan-based content writer who helps local service businesses show up when their customers search.</p>
+                    <p>My background isn't typical for a content writer. I spent 10 years at Thomson Reuters in enterprise software operations, then over a decade leading organizations as a superintendent and COO. I've written board reports, stakeholder communications, and crisis responses that reached thousands.</p>
+                    <p>Now I combine that communication experience with AI-assisted workflows to produce quality content efficiently. You get the strategic thinking of someone who's run organizations, with the output consistency of a dedicated content operation.</p>
+                    <p>I'm not a content mill. I'm one person who takes on a limited number of clients and delivers work I'm proud of. Based in Standish, Michigan, serving businesses across the state and beyond.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="section-inner">
+            <h2>Let's start with a free article</h2>
+            <p>I'll write one article on spec so you can see the quality before committing to anything. No obligation.</p>
+            <a href="/cdn-cgi/l/email-protection#f6bb9f9d93b39e9f98919384c3c0b6b19b979f9ad895999bc98583949c939582cbb0849393d3c4c6a5979b869a93d3c4c6b784829f959a93" class="cta-button">Request Your Free Article</a>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="section-inner">
+            <h2>Get in touch</h2>
+            <p class="section-lead">Ready to discuss your content needs? Reach out directly.</p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">✉</div>
+                    <div>
+                        <div class="contact-label">Email</div>
+                        <div class="contact-value"><a href="/cdn-cgi/l/email-protection#377a5e5c52725f5e59505245020177705a565e5b1954585a"><span class="__cf_email__" data-cfemail="d598bcbeb090bdbcbbb2b0a7e0e39592b8b4bcb9fbb6bab8">[email&#160;protected]</span></a></div>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">☎</div>
+                    <div>
+                        <div class="contact-label">Phone</div>
+                        <div class="contact-value"><a href="tel:9897870260">(989) 787-0260</a></div>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">◎</div>
+                    <div>
+                        <div class="contact-label">Location</div>
+                        <div class="contact-value">Standish, Michigan</div>
+ 
